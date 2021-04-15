@@ -1,0 +1,205 @@
+﻿1.4.1
+#include <stdio.h>
+
+int main() {
+    int n,m,i,k;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    printf("Podaj liczbe calkowita m:\n");
+    scanf("%d", &m);
+    for(i=n ; i<m ; i=i+n){
+    printf("%d\n",i);
+    }
+}
+
+1.4.2
+#include <stdio.h>
+
+int main() {
+    int n,m,i,k;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    printf("Podaj liczbe calkowita m:\n");
+    scanf("%d", &m);
+    for(i=1 ; i<m+1 ; i=i+1){
+    printf("%d\n",i*n);
+    }
+}
+
+1.4.3
+#include <stdio.h>
+
+int main() {
+    int n,m,i,k;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    printf("Podaj liczbe calkowita m:\n");
+    scanf("%d", &m);
+    printf("Podaj liczbe calkowita k:\n");
+    scanf("%d", &k);
+    for(i=m/n*n+n ; i<k ; i=i+n){
+    printf("%d\n",i);
+    }
+}
+
+1.4.4
+#include <stdio.h>
+
+int main() {
+    int n,i,s=1;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    for(i=2 ; i<=n ; i++){
+    s=s*i;
+    }
+    printf("Silnia z %d wynosi %d\n",n,s);
+}
+
+1.4.5
+#include <stdio.h>
+
+int main() {
+    int n,i,s=0;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    for(i=0 ; i<=n ; i++){
+    s=s+i*i;
+    }
+    printf("%d\n",s);
+}
+
+1.4.6
+#include <stdio.h>
+
+int main() {
+    int n,i,s=1;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    for(i=2 ; i<=n ; i=i+2){
+    s=s*i;
+    }
+    printf("Iloczyn wynosi 5%d\n",s);
+}
+
+1.4.7
+#include <stdio.h>
+
+int main() {
+    int n,m,i,w;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    printf("Podaj liczbe calkowita m:\n");
+    scanf("%d", &m);
+    w=1;
+    for(i=n ; i<=m ; i++){
+    w=w*i;
+    }
+    printf("%d\n",w);
+}
+
+1.4.8
+#include <stdio.h>
+
+int main() {
+int n,i,p=1,d=1,t;
+printf("Podaj liczbe calkowita n:\n");
+scanf("%d", &n);
+    for(i=1 ; i<n ; i++)
+	{
+	t=d;
+	d=d+p;
+	p=t;
+    	}
+printf("%d\n",p);
+}
+
+1.4.9
+#include <stdio.h>
+
+int main() {
+    int n,m,a,b;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    printf("Podaj liczbe calkowita m:\n");
+    scanf("%d", &m);
+    a=n;
+    b=m;
+while(a*b!=0){
+    if(a>b){
+        a=a%b;
+    }
+    else{
+        b=b%a;
+    }
+}
+    if(a==0){
+        printf("%d\n",b);
+    }
+    if(b==0){
+        printf("%d\n",a);
+    }
+}
+
+1.4.10
+#include <stdio.h>
+
+int main() {
+    int n,i,p=0;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    for(i=1;i<=n;i++){
+        if(i*i<=n){
+            p=i;
+        }
+    }
+    printf("%d\n",p);
+}
+
+1.4.11
+SKIP
+
+1.4.12 (KOŃCÓWKA OD IF ŹLE COŚ)
+#include <stdio.h>
+
+int main() {
+    int n,a,b,i,s=0;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    for(i=2;i<=n;i++){
+        a=n;
+        b=i;
+        while(a*b!=0){
+            if(a<b){
+                b=b%a;
+            }
+            else{
+                a=a%b;
+            }
+        }
+        if((a==1)||(b==1)){
+            s=s+1;
+        }
+    }
+    printf("%d\n",s);
+}
+
+1.4.13
+#include <stdio.h>
+
+int main() {
+    int n,i,s=1,p=0;
+    printf("Podaj liczbe calkowita n:\n");
+    scanf("%d", &n);
+    for(i=0 ; i<n ; i++){
+    s=s+i*s;
+    p=p+s;
+    }
+    if(i==0){
+        printf("1");
+    }
+    else{
+        printf("%d\n",p+1);
+    }
+}
+
+1.4.14

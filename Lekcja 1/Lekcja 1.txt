@@ -1,0 +1,240 @@
+#include <stdio.h>
+
+int main() {
+   printf("Hello, World!");
+   printf("\nBardzo\ndlugi\nnapis");
+   printf("\nNapis zawierajacy rozne dziwne znaczki // \\\\ $ & %%");
+   int liczba;
+   scanf("%d", &liczba);
+   printf("%d\n", liczba);
+   double wymierna;
+   scanf("%lf", &wymierna);
+   printf("%f\n", wymierna);
+   int pierwsza, druga, trzecia;
+   scanf("%d", &pierwsza);
+   scanf("%d", &druga);
+   scanf("%d", &trzecia);
+   printf("%d\n", pierwsza);
+   printf("%d\n", druga);
+   printf("%d\n", trzecia);
+   int pierwotna;
+   scanf("%d", &pierwotna);
+   printf("%d\n", pierwotna+1);
+   int x, y, z;
+   scanf("%d", &x);
+   scanf("%d", &y);
+   scanf("%d", &z);
+   printf("%f\n", (double)(x+y+z)/3);
+   //lub printf("%f\n", (x+y+z)/3.0);
+   return 0;
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x;
+    scanf("%lf", &x);
+    printf("%f\n", sqrt(x));
+    double y;
+    scanf("%lf", &y);
+    printf("%f\n", fabs(y));
+    return 0;
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float y;
+    scanf("%f", &y);
+    printf("%.2f\n", y);
+    float z;
+    scanf("%f", &z);
+    printf("%e\n", z);
+    return 0;
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int liczba;
+    printf("Podaj liczbe calkowita:");
+    scanf("%d", &liczba);
+    if (liczba<0)
+        liczba *= -1;
+        printf("|liczba| = %d\n",liczba);
+        //drugi sposob
+        printf("Podaj liczbe calkowita:");
+        scanf("%d", &liczba);
+        printf("|liczba| = %d\n",(liczba>=0)?liczba:(-1)*liczba);
+    return 0;
+}
+
+
+
+|| alternatywa && koniunkcja
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a,b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    if (a<b)
+    {
+        printf("%d\n",b);
+    }
+    else
+    {
+        printf("%d\n",a);
+    }
+    int c,d,e,m;
+    scanf("%d",&c);
+    scanf("%d",&d);
+    scanf("%d",&e);
+    if (c<d)
+    {
+        m=d;
+    }
+        else
+        {
+            m=c;
+        }
+        if(m<e)
+        {
+            m=e;
+        }
+        printf("%d\n", m);
+    int x,y;
+    scanf("%d",&x);
+    scanf("%d",&y);
+    if(abs(x)<abs(y))
+    {
+        printf("%d",y);
+    }
+    else
+    {
+        printf("%d", x);
+    }
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int a,b,c;
+    float p;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    p=(double)(a+b+c)/2;
+    printf("%f", sqrt(p*(p-a)*(p-b)*(p-c)));
+}
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int w;
+    double a,b,p;
+    printf("Wybierz pole jakiej figury chcesz obliczyc\n");
+    printf("1- kwadrat\n");
+    printf("2- prostokat\n");
+    printf("3- trojkat\n");
+    scanf("%d", &w);
+    switch (w){
+    case 1:
+        printf("Podaj dlugosc boku kwadratu");
+        scanf("%lf", &a);
+        p=a*a;
+        break;
+    case 2:
+        printf("Podaj dlugosc bokow prostokata");
+        scanf("%lf %lf", &a,&b);
+        p=a*b;
+        break;
+    case 3:
+        printf("Podaj dlugosc podstawy i wysokosci trojkata");
+        scanf("%lf %lf", &a,&b);
+        p=0.5*a*b;
+        break;
+    }
+    printf("Pole figury o podanych wymiarach wynosi %f\n", p);
+}
+
+
+
+//BŁĄD W TYM//
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a,b,c,d;
+    printf("Podaj wspolczynniki rownania kwadratowego");
+    scanf("%lf", &a);
+    scanf("%lf", &b);
+    scanf("%lf", &c);
+    d=b*b-4*a*c;
+    if(d<0)
+    {
+        printf("Wyznacznik ujemny, brak rozwiazan");
+    }
+    else if(d==0)
+    {
+        printf("Rownanie ma jedno rozwiazania x=%f", -b/(2*a));
+    }
+    else
+    {
+        printf("Rownanie ma dwa rozwiazania x1=%f, x2=%f", (-b+sqrt(d)\(2*a)),(-b-sqrt(d)\(2*a)));
+    }
+}
+
+
+
+//TU TEŻ BŁĄD//
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a,b,c,d,e,f,x,y,w,wx,wy;
+    scanf("%lf", &a);
+    scanf("%lf", &b);
+    scanf("%lf", &c);
+    scanf("%lf", &d);
+    scanf("%lf", &e);
+    scanf("%lf", &f);
+    if(w==0&&wy!=0&&wx!=0)
+    {
+        printf("Układ sprzeczny");
+    }
+    else if(wy==0||wx==0&&w==0)
+    {
+        printf("Układ nieoznaczony");
+    }
+    else
+    {
+    w=a*e-b*d;
+    wx=c*e-b*f;
+    wy=a*f-c*d;
+    x=wx/w;
+    y=wy/w;
+    printf("x=%f, y=%f", x, y);
+    }
+}
